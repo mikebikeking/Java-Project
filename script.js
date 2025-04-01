@@ -21,7 +21,7 @@ function displayMessage(message) {
 async function fetchMovies(searchTerm) {
   try {
     const response = await fetch(
-      `http://www.omdbapi.com/?apikey=2569b6b9&s=${searchTerm}`
+      `https://www.omdbapi.com/?apikey=2569b6b9&s=${searchTerm}`
     );
     const moviesData = await response.json();
     return moviesData.Response === "True" && moviesData.Search
